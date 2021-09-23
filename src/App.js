@@ -26,6 +26,7 @@ class App extends Component {
 		}
 	}
 	
+	
 	handle_search = (event) => {
 		event.preventDefault();
 		var txt_searh = event.target.txtSearch.value;
