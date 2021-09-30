@@ -148,11 +148,11 @@ class App extends Component {
 					: ''
 				}
 				<Row className="mt-2 text-center">
-					<h1 ref={this.myRef_video}>Youtube Player</h1>
+					<h1>Youtube Player</h1>
 				</Row>
-				<Search handle_search={this.handle_search}/>
+				<Search handle_search={this.handle_search} ref={this.myRef_video}/>
 				<Video video_id={this.state.video_id} />
-				<Results results={this.state.results} handle_play={this.handle_play}/>
+				<Results results={this.state.results} handle_play={this.handle_play} />
 				{this.state.is_show_more && 
 					(
 						<Row className="mt-2 text-center">

@@ -10,7 +10,7 @@ class Video extends Component {
 		return (
 			<Row>
 				{url && 
-					<iframe width="1000" height="600" src={url}></iframe>
+					<iframe width="1000" height="600" src={url} frameborder="0" allowfullscreen="true"></iframe>
 				}
 			</Row>
 		)
