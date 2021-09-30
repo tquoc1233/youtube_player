@@ -14,7 +14,7 @@ class Search extends Component {
 					<Form onSubmit={this.props.handle_search}>
 						<InputGroup className="mb-3">
 							<FormControl
-							placeholder="Nhập tên video."
+							placeholder="Keyword"
 							aria-label="Recipient's username"
 							aria-describedby="basic-addon2"
 							name="txtSearch"
