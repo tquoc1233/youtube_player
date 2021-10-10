@@ -19,19 +19,18 @@ class Results extends Component {
 							btn_name = 'Play';
 						}
 						return(
-							<Card style={{ width: '18rem' }} className="m-2" >
+							<Card style={{ width: '30%', cursor: "pointer" }} className="m-2" onClick={(e) => this.props.handle_play(e, item.url, is_video)}>
 								<Card.Img variant="top" width="200" height="200" src={item.thumbnail} />
-								<Card.Body>
+								<Card.Body >
 									<Card.Title>{item.name ? item.name : item.title}</Card.Title>
 									{is_video && 
 										(
 											<>
 												<Card.Text>Date: {item.uploadedDate}</Card.Text>
-												<Card.Text>Views: {item.views}</Card.Text>
+												<Card.Text>Views: {item.views && String(item.views).replace(/(.)(?=(\d{3})+$)/g,'$1,')}</Card.Text>
 											</>
 										)
 									}
-									<Button variant="primary" onClick={(e) => this.props.handle_play(e, item.url, is_video)}>{btn_name}</Button>
 								</Card.Body>
 							</Card>
 						)
